@@ -1,0 +1,55 @@
+import { useEffect, useState } from 'react';
+import { PortableText } from '@portabletext/react';
+import { getSanityImageUrl } from '../lib/get-sanity-image-url';
+
+const components = {
+  block: {
+    normal: ({ children }) => <>{children}</>, // no <p>, just raw inline content
+  },
+  marks: {
+    strong: ({ children }) => <strong>{children}</strong>,
+    em: ({ children }) => <em>{children}</em>,
+  },
+};
+
+export const Hero = (props) => {
+  const [imageSrc, setImageSrc] = useState<string>('');
+
+  useEffect(() => {
+    setImageSrc(getSanityImageUrl(props.heroImage.image.asset._ref));
+  }, [props.heroImage]);
+
+  return (
+    <div className="py-[3rem] px-[1rem] bg-stone-200">
+      <div className="max-w-[980px] mx-auto flex flex-col gap-[2rem] items-center justify-center">
+        <div className="flex flex-col gap-[2rem] items-center md:flex-row md:justify-between md:items-center">
+          <div className="flex flex-col gap-[1rem] md:w-1/2">
+            <h1 className="text-[2rem] font-thin text-center md:text-left">
+              <PortableText value={props.title} components={components} />
+            </h1>
+            <h2 className="text-base w-full text-center md:text-left">
+              <PortableText value={props.subtitle} components={components} />
+            </h2>
+          </div>
+
+          <div className="items-center max-w-[480px] flex flex-col gap-[1.5rem] md:w-1/2 md:items-start">
+            <p className="text-md">
+              {props.description}
+            </p>
+
+            <a
+              href={props.cta.url}
+              className="w-fit block px-[2.25rem] py-[0.75rem] md:px-[3rem] md:py-[0.5rem] text-lg text-white border border-stone-700 md:p-1 md:m-0 bg-stone-700 hover:text-stone-700 hover:bg-stone-200 transition-colors duration-300 md:px-[1.5rem] md:p-3"
+            >
+              {props.cta.label}
+            </a>
+          </div>
+        </div>
+
+        {imageSrc && (
+          <img className="object-cover max-h-[420px] w-full" src={imageSrc} alt={props.imageAlt} />
+        )}
+      </div>
+    </div>
+  );
+};
