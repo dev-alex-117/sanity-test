@@ -20,11 +20,11 @@ export const Hero = (props: any) => {
   }, [props.heroImage]);
 
   return (
-    <div className="py-[3rem] px-[1rem] bg-stone-200">
+    <div className="py-[2rem] md:py-[3rem] px-[1rem] bg-stone-200">
       <div className="max-w-[980px] mx-auto flex flex-col gap-[2rem] items-center justify-center">
-        <div className="flex flex-col gap-[2rem] items-center md:flex-row md:justify-between md:items-center">
+        <div className="flex flex-col gap-[2rem] items-center md:flex-row md:justify-between md:items-start">
           <div className="flex flex-col gap-[1rem] md:w-1/2">
-            <h1 className="text-[2rem] font-thin text-center md:text-left">
+            <h1 className="text-[2.75rem] font-light text-center md:text-left">
               <PortableText value={props.title} components={components} />
             </h1>
             <h2 className="text-base w-full text-center md:text-left">
