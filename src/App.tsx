@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import { sanityClient } from './lib/sanity-client';
 import { Header } from './modules/header.tsx';
 import { Hero } from './modules/hero.tsx';
 import { useSanity } from './contexts/sanity-provider';
@@ -17,7 +15,7 @@ const App = () => {
          />
       )}
 
-      {state.data.page?.items.map((item) => {
+      {state.data.page?.items.map((item: any) => {
         switch (item._type) {
           case 'hero':
             return <Hero key={item._key} {...item} />;

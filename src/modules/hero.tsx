@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { PortableText } from '@portabletext/react';
+import { PortableText, type PortableTextComponents  } from '@portabletext/react';
 import { getSanityImageUrl } from '../lib/get-sanity-image-url';
 
-const components = {
+const components: PortableTextComponents = {
   block: {
     normal: ({ children }) => <>{children}</>, // no <p>, just raw inline content
   },
@@ -12,7 +12,7 @@ const components = {
   },
 };
 
-export const Hero = (props) => {
+export const Hero = (props: any) => {
   const [imageSrc, setImageSrc] = useState<string>('');
 
   useEffect(() => {

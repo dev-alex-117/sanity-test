@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { HamburgerMenu } from '../components/hamburger-menu.tsx';
 import { useToggle } from '@/hooks/use-toggle.tsx';
 import { getSanityImageUrl } from '@/lib/get-sanity-image-url.ts';
-import type { SanityClient } from '@sanity/client';
 
 export const headerQuery = `*[_type == "header"][0] {
   logo,
@@ -10,19 +9,19 @@ export const headerQuery = `*[_type == "header"][0] {
   navigationCtas,
 }`;
 
-interface Image {
-  src: string;
-  alt: string;
-}
+// interface Image {
+//   src: string;
+//   alt: string;
+// }
 
-interface HeaderProps {
-  sanityClient: SanityClient;
-  logo: Image;
-  links: Array<{ label: string; url: string }>;
-  ctas: Array<{ label: string; url: string }>;
-}
+// interface HeaderProps {
+//   sanityClient: SanityClient;
+//   logo: Image;
+//   links: Array<{ label: string; url: string }>;
+//   ctas: Array<{ label: string; url: string }>;
+// }
 
-export const Header = (props: HeaderProps) => {
+export const Header = (props: any) => {
   const [imageSrc, setImageSrc] = useState<string>('');
   const [isOpen, toggle] = useToggle(false);
   console.log({ props });
@@ -63,7 +62,7 @@ export const Header = (props: HeaderProps) => {
         >
           {props.links?.length > 0 && (
             <ul className={'flex flex-col md:flex-row md:space-x-6 md:h-auto'}>
-              {props.links.map((link) => (
+              {props.links.map((link: any) => (
                 <li key={link.label}>
                   <a
                     href={link.url}
@@ -78,7 +77,7 @@ export const Header = (props: HeaderProps) => {
 
           {props.ctas?.length > 0 && (
             <ul className={'flex flex-col lg:flex-row lg:space-x-6 lg:h-auto'}>
-              {props.ctas.map((link) => (
+              {props.ctas.map((link: any) => (
                 <li key={link.label} className="flex items-center justify-center">
                   <div className="w-[80%] md:w-[100%]">
                     <a
