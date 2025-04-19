@@ -1,0 +1,80 @@
+{
+  "contentImageBlockContent": [
+    {
+      "markDefs": [],
+      "children": [
+        {
+          "text": "I'm delighted to be on this wellness journey with you. But before we dive into the incredible transformation that awaits you, let me share a bit about my personal journey and what led me to become a wellness coach.",
+          "_key": "cb8e7b24b197",
+          "_type": "span",
+          "marks": []
+        }
+      ],
+      "_type": "block", 
+      "style": "normal",
+      "_key": "20e2eac4b263"
+    },
+    {
+      "markDefs": [],
+      "children": [
+        {
+          "text": "My own path to wellness wasn't always straightforward. Like many, I experienced moments of stress, imbalance, and even uncertainty about my health and life's direction. It was during these challenging times that I realized the profound impact that wellness practices had on my physical and emotional well-being.",
+          "_key": "cb8e7b24b198",
+          "_type": "span",
+          "marks": []
+        }
+      ],
+      "_type": "block",
+      "style": "normal", 
+      "_key": "20e2eac4b264"
+    }
+  ],
+  "contentImageBlockTitle": [
+    {
+      "style": "normal",
+      "_key": "4cabe134a9b5",
+      "markDefs": [],
+      "children": [
+        {
+          "text": "About One Breath",
+          "_key": "cb8e7b24b197",
+          "_type": "span",
+          "marks": []
+        }
+      ],
+      "_type": "block"
+    }
+  ],
+  "servicesTitle": [
+    {
+      "style": "normal",
+      "_key": "4cabe134a9b5",
+      "markDefs": [],
+      "children": [
+        {
+          "text": "Services Offered",
+          "_key": "cb8e7b24b197",
+          "_type": "span",
+          "marks": []
+        }
+      ],
+      "_type": "block"
+    }
+  ],
+  "servicesDescription": [
+    {
+      "style": "normal",
+      "_key": "4cabe134a9b1",
+      "markDefs": [],
+      "children": [
+        {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+          "_key": "cb8e7b24b197",
+          "_type": "span",
+          "marks": []
+        }
+      ],
+      "_type": "block"
+    }
+  ]
+}

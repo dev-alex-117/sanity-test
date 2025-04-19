@@ -22,9 +22,9 @@ export const Hero = (props: any) => {
   return (
     <div className="py-[2rem] md:py-[3rem] px-[1rem] bg-stone-200">
       <div className="max-w-[980px] mx-auto flex flex-col gap-[2rem] items-center justify-center">
-        <div className="flex flex-col gap-[2rem] items-center md:flex-row md:justify-between md:items-start">
-          <div className="flex flex-col gap-[1rem] md:w-1/2">
-            <h1 className="text-[2.75rem] font-light text-center md:text-left">
+        <div className="flex flex-col gap-[1.5rem] items-center md:justify-between">
+          <div className="flex flex-col gap-[1rem]">
+            <h1 className="text-[2.75rem] font-light text-center">
               <PortableText value={props.title} components={components} />
             </h1>
             <h2 className="text-base w-full text-center md:text-left">
@@ -32,7 +32,7 @@ export const Hero = (props: any) => {
             </h2>
           </div>
 
-          <div className="items-center max-w-[480px] flex flex-col gap-[1.5rem] md:w-1/2 md:items-start">
+          <div className="items-center text-center flex flex-col gap-[1.5rem] px-[1rem]">
             <p className="text-md">
               {props.description}
             </p>
