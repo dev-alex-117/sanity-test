@@ -32,20 +32,20 @@ export const ContentImageBlock = (props: any) => {
         <div className="flex flex-col gap-[1rem] items-center md:w-1/2">
           <div className="flex flex-col gap-[1.5rem]">
             <h2 className="text-4xl w-full font-thin text-center md:text-left">
-              <PortableText value={props.title} components={componentsClean} />
+              {props.title}
             </h2>
 
             <div className="flex flex-col gap-[1rem]">
-              <PortableText value={props.content} components={components} />
+              <PortableText value={props.description} components={components} />
             </div>
           </div>
 
           <div className="flex justify-end w-full md:justify-start">
             <a
-              href={props.cta.url}
+              href={props.link.url}
               className="w-fit block px-[2.25rem] py-[0.75rem] md:px-[3rem] md:py-[0.5rem] text-lg text-white border border-stone-700 md:p-1 md:m-0 bg-stone-700 hover:text-stone-700 hover:bg-stone-200 transition-colors duration-300 md:px-[1.5rem] md:p-3"
             >
-              {props.cta.label}
+              {props.link.label}
             </a>
           </div>
         </div>

@@ -24,7 +24,6 @@ export const headerQuery = `*[_type == "header"][0] {
 export const Header = (props: any) => {
   const [imageSrc, setImageSrc] = useState<string>('');
   const [isOpen, toggle] = useToggle(false);
-  console.log({ props });
 
   useEffect(() => {
     setImageSrc(getSanityImageUrl(props.logo.image.asset._ref));
