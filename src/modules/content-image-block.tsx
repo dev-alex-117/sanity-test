@@ -12,13 +12,6 @@ const components: PortableTextComponents = {
   },
 };
 
-const componentsClean: PortableTextComponents = {
-  ...components,
-  // block: {
-  //   normal: ({ children }) => <>{children}</>, // no <p>, just raw inline content
-  // },
-};
-
 export const ContentImageBlock = (props: any) => {
   const [imageSrc, setImageSrc] = useState('');
 
