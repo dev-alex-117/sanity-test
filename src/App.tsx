@@ -2,13 +2,13 @@ import { Header } from './modules/header.tsx';
 import { Hero } from './modules/hero.tsx';
 import { ContentImageBlock } from './modules/content-image-block.tsx';
 import { FeatureCards } from './modules/feature-cards.tsx';
-import tmp from './tmp.json';
 
 import { useSanity } from './contexts/sanity-provider';
 import { Testimonials } from './modules/testimonials.tsx';
-import { ContactForm } from './modules/contact.tsx';
+import { ContactForm } from './modules/contact-form.tsx';
 import { LogoCarousel } from './modules/logo-carousel.tsx';
 import { Footer } from './modules/footer.tsx';
+
 const App = () => {
   const { state } = useSanity();
 
@@ -34,13 +34,12 @@ const App = () => {
             return <LogoCarousel key={item._key} {...item} />;
           case 'featureCards':
             return <FeatureCards key={item._key} {...item} />;
-          case 'footer':
+          case 'contactForm':
+            return <ContactForm key={item._key} {...item} />;
           default:
             return null;
         }
       })}
-
-      <ContactForm />
 
       <Footer />
     </>
