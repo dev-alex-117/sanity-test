@@ -26,8 +26,6 @@ const Feature = (props: any) => {
     setImageSrc(getSanityImageUrl(props.icon.asset._ref));
   }, [props.icon]);
 
-  console.log({ props });
-
   return (
     <div className="flex flex-col gap-[1rem] items-center">
       {imageSrc && (

@@ -92,7 +92,6 @@ export const SanityProvider = ({ children, sanityClient, slug }: SanityProviderP
     const getPageData = async () => {
       try {
         const result = await sanityClient.fetch(query, { slug });
-        console.log(result);
 
         dispatch({ type: actionTypes.SET_DATA, payload: result });
       } catch (error) {

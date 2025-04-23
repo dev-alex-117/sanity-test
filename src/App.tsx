@@ -12,8 +12,6 @@ import { Footer } from './modules/footer.tsx';
 const App = () => {
   const { state } = useSanity();
 
-  console.log(state);
-
   return (
     <>
       {state.data.header && (
