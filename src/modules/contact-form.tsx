@@ -31,6 +31,7 @@ type ContactFormProps = {
     placeholder: string;
     required: boolean;
   };
+  sectionId: string;
 };
 
 export function ContactForm(props: ContactFormProps) {
@@ -95,7 +96,7 @@ export function ContactForm(props: ContactFormProps) {
 
 
   return (
-    <div className="py-[2rem] px-[1rem] bg-neutral-100">
+    <div className="py-[2rem] px-[1rem] bg-neutral-100" id={props.sectionId}>
       <div className="max-w-[767px] mx-auto flex flex-col gap-[2rem]">
         <h2 className="text-4xl w-full font-light text-center">
           {props.title}

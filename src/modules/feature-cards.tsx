@@ -46,7 +46,7 @@ const Feature = (props: any) => {
 export const FeatureCards = (props: any) => {
 
   return (
-    <div className="py-[3rem] md:py-[3rem] px-[1rem] bg-neutral-200">
+    <div className="py-[3rem] md:py-[3rem] px-[1rem] bg-neutral-200" id={props.sectionId}>
       <div className="flex flex-col gap-[4rem]">
         <div className="max-w-[980px] mx-auto flex flex-col gap-[1.5rem] items-center">
           <h2 className="text-4xl w-full font-light text-center">

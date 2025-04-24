@@ -20,7 +20,7 @@ export const Hero = (props: any) => {
   }, [props.heroImage]);
 
   return (
-    <div className="py-[2rem] md:py-[3rem] px-[1rem] bg-stone-200">
+    <div className="py-[2rem] md:py-[3rem] px-[1rem] bg-stone-200" id={props.sectionId}>
       <div className="max-w-[980px] mx-auto flex flex-col gap-[2rem] items-center justify-center">
         <div className="flex flex-col gap-[1.5rem] items-center md:justify-between">
           <div className="flex flex-col gap-[1rem]">

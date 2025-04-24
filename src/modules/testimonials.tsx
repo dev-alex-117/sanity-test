@@ -87,7 +87,7 @@ const Testimonial = (props: any) => {
 export const Testimonials = (props: any) => {
 
   return (
-    <div className="py-[3rem] md:py-[3rem] px-[1rem] bg-purple-100">
+    <div className="py-[3rem] md:py-[3rem] px-[1rem] bg-purple-100" id={props.sectionId}>
       <div className="flex flex-col max-w-[980px] mx-auto gap-[2rem]">
         <div className="flex flex-col gap-[1.5rem] items-center">
           <h2 className="text-4xl w-full font-light text-center">

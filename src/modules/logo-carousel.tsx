@@ -36,7 +36,7 @@ const Logo = (props: any) => {
     >
       <img
         src={imageSrc}
-        alt={props.image.alt}
+        alt={props.image.title || 'Logo'}
         className="w-full h-full object-contain max-w-[100px] max-h-[100px]"
       />
     </a>
@@ -45,7 +45,7 @@ const Logo = (props: any) => {
 
 export function LogoCarousel(props: any) {
   return (
-    <div className="py-[2rem] md:py-[3rem] px-[1rem] bg-blue-100">
+    <div className="py-[2rem] md:py-[3rem] px-[1rem] bg-blue-100" id={props.sectionId}>
       <h2 className="text-xl font-normal mb-4 text-center">
         <PortableText value={props.title} components={components} />
       </h2>

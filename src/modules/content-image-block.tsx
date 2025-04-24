@@ -3,13 +3,14 @@ import { PortableText, type PortableTextComponents } from '@portabletext/react';
 import { getSanityImageUrl } from '../lib/get-sanity-image-url';
 
 const components: PortableTextComponents = {
-  // block: {
-  //   normal: ({ children }) => <p className="my-[1rem]">{children}</p>,
-  // },
   marks: {
     strong: ({ children }) => <strong>{children}</strong>,
     em: ({ children }) => <em>{children}</em>,
   },
+};
+
+const componentsClean: PortableTextComponents = {
+  ...components,
 };
 
 export const ContentImageBlock = (props: any) => {
@@ -20,16 +21,16 @@ export const ContentImageBlock = (props: any) => {
   }, [props.image]);
 
   return (
-    <div className="py-[3rem] md:py-[3rem] px-[1rem] bg-zinc-300">
+    <div className="py-[3rem] md:py-[3rem] px-[1rem] bg-zinc-300" id={props.sectionId}>
       <div className="flex flex-col max-w-[980px] mx-auto gap-[2rem] md:flex-row">
         <div className="flex flex-col gap-[1rem] items-center md:w-1/2">
           <div className="flex flex-col gap-[1.5rem]">
             <h2 className="text-4xl w-full font-thin text-center md:text-left">
-              {props.title}
+              <PortableText value={props.title} components={componentsClean} />
             </h2>
 
             <div className="flex flex-col gap-[1rem]">
-              <PortableText value={props.description} components={components} />
+              <PortableText value={props.content} components={components} />
             </div>
           </div>
 
